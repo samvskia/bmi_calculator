@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.6.0.final using JasperReports Library version 6.6.0  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="bmi_parameters" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="24068411-d4f2-489c-a9c2-f6137f3ebd31">
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="One Empty Record"/>
+	<parameter name="age" class="java.lang.Integer"/>
+	<parameter name="firstName" class="java.lang.String"/>
+	<parameter name="lastName" class="java.lang.String"/>
+	<parameter name="gender" class="java.lang.String"/>
+	<parameter name="mass" class="java.lang.Double"/>
+	<parameter name="height" class="java.lang.Double"/>
+	<parameter name="indexBMI" class="java.lang.Double"/>
+	<parameter name="minBMI" class="java.lang.Double"/>
+	<parameter name="maxBMI" class="java.lang.Double"/>
+	<queryString>
+		<![CDATA[]]>
+	</queryString>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="81" splitType="Stretch">
+			<staticText>
+				<reportElement x="180" y="0" width="201" height="60" uuid="2a033603-8485-4f09-9c5f-1b6b3b4403ad"/>
+				<textElement textAlignment="Center">
+					<font fontName="Cooper Black" size="26"/>
+				</textElement>
+				<text><![CDATA[BMI Calculator]]></text>
+			</staticText>
+		</band>
+	</title>
+	<detail>
+		<band height="573" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="40" width="180" height="41" uuid="21d76af9-842d-423f-a4bc-47a278d9a054"/>
+				<textElement textAlignment="Left">
+					<font size="22"/>
+				</textElement>
+				<text><![CDATA[Firstname]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="160" width="180" height="41" uuid="0134d9a3-78b0-4254-b9b2-25fe9c2e0e80"/>
+				<textElement textAlignment="Left">
+					<font size="20"/>
+				</textElement>
+				<text><![CDATA[Age]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="220" width="180" height="41" uuid="5a2abf57-7bb8-4274-af5d-2237dcdd354a"/>
+				<textElement textAlignment="Left">
+					<font size="20"/>
+				</textElement>
+				<text><![CDATA[Gender]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="280" width="180" height="41" uuid="51dceaed-930f-44c6-ad06-6d5fb068c625"/>
+				<textElement textAlignment="Left">
+					<font size="20"/>
+				</textElement>
+				<text><![CDATA[Mass]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="340" width="180" height="41" uuid="95418f89-f178-4e31-9393-8a95feb52395"/>
+				<textElement textAlignment="Left">
+					<font size="20"/>
+				</textElement>
+				<text><![CDATA[Height]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="400" width="280" height="41" uuid="016e5a39-931a-4b90-b65f-90f2169bb9e0"/>
+				<textElement textAlignment="Left">
+					<font size="20"/>
+				</textElement>
+				<text><![CDATA[Personal Body Mass Index]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="460" width="280" height="41" uuid="f6770117-6d2a-44c8-824a-d3d94d84b9c8"/>
+				<textElement textAlignment="Left">
+					<font size="20"/>
+				</textElement>
+				<text><![CDATA[Min Body Mass Index]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="520" width="280" height="41" uuid="4f2d14dd-e8c2-4076-aad1-4f005947fb31"/>
+				<textElement textAlignment="Left">
+					<font size="20"/>
+				</textElement>
+				<text><![CDATA[Max Body Mass Index]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="100" width="180" height="41" uuid="1d2f9f7b-04d3-480c-bf18-93c19f0da621"/>
+				<textElement textAlignment="Left">
+					<font size="22"/>
+				</textElement>
+				<text><![CDATA[Lastname]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="430" y="280" width="90" height="41" uuid="2cf6b1b6-8cc0-4d56-ba4d-c6198336ea4a"/>
+				<textElement textAlignment="Left">
+					<font size="22"/>
+				</textElement>
+				<text><![CDATA[Kilogramm]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="430" y="339" width="70" height="41" uuid="1a8aae3a-e584-4e31-84e7-0b3430c9c957"/>
+				<textElement textAlignment="Left">
+					<font size="22"/>
+				</textElement>
+				<text><![CDATA[Meter]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="380" y="40" width="172" height="41" uuid="05011b7b-446c-4578-94e7-deb86e7996d1"/>
+				<textElement>
+					<font size="22"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{firstName}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="381" y="100" width="171" height="41" uuid="6d3d593b-c501-4fec-b7ac-946cde5dc065"/>
+				<textElement>
+					<font size="22"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{lastName}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="381" y="160" width="100" height="41" uuid="96985650-2f1f-4d6e-8b61-1deb5b71ab77"/>
+				<textElement>
+					<font size="22"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{age}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="380" y="220" width="120" height="41" uuid="4b6f20c1-af93-4f41-9b96-519729744a4f"/>
+				<textElement>
+					<font size="22"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{gender}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="380" y="280" width="50" height="41" uuid="c3e2b161-b758-43c0-a94f-b0d692680604"/>
+				<textElement>
+					<font size="22"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{mass}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="381" y="339" width="49" height="41" uuid="e1e4d851-8f18-446e-a6c1-b26f4e525ea3"/>
+				<textElement>
+					<font size="22"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{height}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="380" y="400" width="101" height="41" uuid="fbdc99c7-919b-4499-9964-bcc22f1c0139"/>
+				<textElement>
+					<font size="22"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{indexBMI}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="381" y="460" width="100" height="41" uuid="8ef59202-99bd-413a-bb93-3030b139f53d"/>
+				<textElement>
+					<font size="22"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{minBMI}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="380" y="520" width="101" height="41" uuid="dffe863f-2ebe-4d94-8f92-005f6d203d33"/>
+				<textElement>
+					<font size="22"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{maxBMI}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+</jasperReport>
